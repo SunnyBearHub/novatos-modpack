@@ -63,12 +63,17 @@ class GameplaySettingsSubState extends BaseOptionsMenu
 			true);
 		addOption(option);
 
-		var option:Option = new Option('Hitsounds',
-			'If checked, when you hit a note plays a sound.',
-			'hitsounds',
-			'bool',
-			false);
-		addOption(option);		
+		var option:Option = new Option('Hitsounds Volume',
+		    'Volume of the Hitsounds.',
+		    'hitsoundVolume',
+		    'percent',
+		    0);
+	    addOption(option);
+	    option.scrollSpeed = 1.6;
+	    option.minValue = 0.0;
+	    option.maxValue = 1;
+	    option.changeValue = 0.1;
+	    option.decimals = 1;
 		
 		var option:Option = new Option('Judgement Counter',
 			'If checked, shows your Sicks, Goods, Bads and Shits in a part of screen.',

@@ -41,6 +41,7 @@ class ClientPrefs {
 	public static var timeBarType:String = 'Time Left';
 	public static var scoreZoom:Bool = true;
 	public static var noReset:Bool = false;
+	public static var hitsoundVolume:Float = 0;
 	public static var arrowOpacity:Float = 1;
 	public static var opponentArrowOpacity:Float = 1;
 	public static var healthCounter:Bool = true;
@@ -167,6 +168,7 @@ class ClientPrefs {
 		FlxG.save.data.safeFrames = safeFrames;
 		FlxG.save.data.gameplaySettings = gameplaySettings;
 		FlxG.save.data.controllerMode = controllerMode;
+		FlxG.save.data.hitsoundVolume = hitsoundVolume;
 		FlxG.save.data.screenRes = screenRes;
 		FlxG.save.data.screenScaleMode = screenScaleMode;
 	
@@ -328,6 +330,9 @@ class ClientPrefs {
 		}
 		if(FlxG.save.data.controllerMode != null) {
 			controllerMode = FlxG.save.data.controllerMode;
+		}
+		if(FlxG.save.data.hitsoundVolume != null) {
+			hitsoundVolume = FlxG.save.data.hitsoundVolume;
 		}
 		if(FlxG.save.data.screenRes != null) {
 			screenRes = FlxG.save.data.screenRes;

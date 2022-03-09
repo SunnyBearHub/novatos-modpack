@@ -66,6 +66,8 @@ class Note extends FlxSprite
 
 	public var texture(default, set):String = null;
 
+	public var hitsoundDisabled:Bool = false;
+
 	public var noAnimation:Bool = false;
 	public var hitCausesMiss:Bool = false;
 	public var distance:Float = 2000;//plan on doing scroll directions soon -bb
@@ -160,6 +162,7 @@ class Note extends FlxSprite
 		{
 			alpha = 0.6;
 			multAlpha = 0.6;
+			hitsoundDisabled = true;
 			if(ClientPrefs.downScroll) flipY = true;
 
 			offsetX += width / 2;
