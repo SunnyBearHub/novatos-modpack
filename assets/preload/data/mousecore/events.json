@@ -1,0 +1,89 @@
+{
+	"song": {
+		"speed": 3.50000000000002,
+		"stage": "cheater",
+		"player1": "bf",
+		"player2": "suicideh-mousecore",
+		"player3": null,
+		"events": [
+			[
+				73846.1538461538,
+				[
+					[
+						"Screen Shake",
+						"0.5, 0.05",
+						"0.5, 0.05"
+					],
+					[
+						"Change Character",
+						"gf",
+						"experiment"
+					],
+					[
+						"Replace stage layer",
+						"cheater2",
+						"cheater"
+					]
+				]
+			],
+			[
+				75625,
+				[
+					[
+						"Change Character",
+						"1",
+						"mousea"
+					]
+				]
+			],
+			[
+				175589.743589744,
+				[
+					[
+						"Add Camera Zoom",
+						"5",
+						"5"
+					],
+					[
+						"Change Character",
+						"1",
+						"nothing"
+					],
+					[
+						"Change Character",
+						"gf",
+						"nothing"
+					],
+					[
+						"Replace stage layer",
+						"cheater3",
+						"cheater2"
+					]
+				]
+			],
+			[
+				186256.41025641,
+				[
+					[
+						"Add Camera Zoom",
+						"5",
+						"5"
+					],
+					[
+						"Change Character",
+						"1",
+						"suicideh-mousecore"
+					]
+				]
+			]
+		],
+		"notes": [],
+		"splashSkin": "noteSplashes",
+		"validScore": false,
+		"gfVersion": "nothing",
+		"bpm": 156,
+		"arrowSkin": "",
+		"needsVoices": true,
+		"song": "MouseCore"
+	}
+}

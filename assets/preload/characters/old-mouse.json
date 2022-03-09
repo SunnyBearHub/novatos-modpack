@@ -1,0 +1,78 @@
+{
+	"animations": [
+		{
+			"loop": false,
+			"offsets": [
+				-402,
+				-80
+			],
+			"anim": "idle",
+			"fps": 24,
+			"name": "MouseOld Idle",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				-342,
+				-80
+			],
+			"anim": "singUP",
+			"fps": 24,
+			"name": "MouseOld Up",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				-202,
+				-100
+			],
+			"anim": "singLEFT",
+			"fps": 24,
+			"name": "MouseOld Left",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				-330,
+				-120
+			],
+			"anim": "singRIGHT",
+			"fps": 24,
+			"name": "MouseOld Right",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				-392,
+				-341
+			],
+			"anim": "singDOWN",
+			"fps": 24,
+			"name": "MouseOld Down",
+			"indices": []
+		}
+	],
+	"no_antialiasing": false,
+	"image": "characters/old_mouse",
+	"position": [
+		-320,
+		0
+	],
+	"healthicon": "mouse-old",
+	"flip_x": false,
+	"healthbar_colors": [
+		1,
+		0,
+		0
+	],
+	"camera_position": [
+		250,
+		230
+	],
+	"sing_duration": 4,
+	"scale": 1
+}

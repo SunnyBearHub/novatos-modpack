@@ -1,0 +1,89 @@
+{
+	"animations": [
+		{
+			"offsets": [
+				-322,
+				-30
+			],
+			"loop": true,
+			"fps": 20,
+			"anim": "idle",
+			"indices": [],
+			"name": "Idle"
+		},
+		{
+			"offsets": [
+				-214,
+				0
+			],
+			"loop": true,
+			"fps": 20,
+			"anim": "singUP",
+			"indices": [],
+			"name": "Up"
+		},
+		{
+			"offsets": [
+				-383,
+				-57
+			],
+			"loop": true,
+			"fps": 20,
+			"anim": "singDOWN",
+			"indices": [],
+			"name": "Down"
+		},
+		{
+			"offsets": [
+				-221,
+				-33
+			],
+			"loop": true,
+			"fps": 20,
+			"anim": "singLEFT",
+			"indices": [],
+			"name": "Left"
+		},
+		{
+			"offsets": [
+				-392,
+				-37
+			],
+			"loop": true,
+			"fps": 20,
+			"anim": "singRIGHT",
+			"indices": [],
+			"name": "Right"
+		},
+		{
+			"offsets": [
+				-334,
+				20
+			],
+			"loop": true,
+			"fps": 20,
+			"anim": "laughter",
+			"indices": [],
+			"name": "laughter"
+		}
+	],
+	"no_antialiasing": false,
+	"image": "characters/old_suicide",
+	"position": [
+		-320,
+		0
+	],
+	"healthicon": "oldsuicide",
+	"flip_x": false,
+	"healthbar_colors": [
+		108,
+		108,
+		108
+	],
+	"camera_position": [
+		210,
+		-70
+	],
+	"sing_duration": 4,
+	"scale": 1
+}

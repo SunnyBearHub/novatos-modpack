@@ -1,0 +1,78 @@
+{
+	"animations": [
+		{
+			"offsets": [
+				-302,
+				-20
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "idle",
+			"indices": [],
+			"name": "Idle"
+		},
+		{
+			"offsets": [
+				-132,
+				20
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "singUP",
+			"indices": [],
+			"name": "Up"
+		},
+		{
+			"offsets": [
+				-292,
+				40
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "singLEFT",
+			"indices": [],
+			"name": "Left"
+		},
+		{
+			"offsets": [
+				-149,
+				-7
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "singRIGHT",
+			"indices": [],
+			"name": "Right"
+		},
+		{
+			"offsets": [
+				-292,
+				-231
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "singDOWN",
+			"indices": [],
+			"name": "Down"
+		}
+	],
+	"no_antialiasing": false,
+	"image": "characters/old_labrat",
+	"position": [
+		-320,
+		0
+	],
+	"healthicon": "oldexperiment",
+	"flip_x": false,
+	"healthbar_colors": [
+		243,
+		80,
+		72
+	],
+	"camera_position": [
+		250,
+		230
+	],
+	"sing_duration": 4,
+	"scale": 1
+}

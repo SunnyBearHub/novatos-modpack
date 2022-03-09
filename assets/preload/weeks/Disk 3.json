@@ -1,0 +1,48 @@
+{
+	"storyName": "chapter 3",
+	"hideFreeplay": false,
+	"weekBackground": "alley",
+	"weekBefore": "tutorial",
+	"freeplayColor": [
+		146,
+		113,
+		253
+	],
+	"startUnlocked": true,
+	"hideStoryMode": false,
+	"weekCharacters": [
+		"suicide",
+		"bf",
+		"gf"
+	],
+	"songs": [
+		[
+			"Misery",
+			"suicide",
+			[
+				100,
+				100,
+				110
+			]
+		],
+		[
+			"Suicide",
+			"suicide3",
+			[
+				0,
+				0,
+				20
+			]
+		],
+		[
+			"Insanity Psychosis",
+			"suicide4",
+			[
+				20,
+				0,
+				0
+			]
+		]
+	],
+	"weekName": "Chapter 3"
+}

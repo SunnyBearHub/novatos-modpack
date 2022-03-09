@@ -1,0 +1,39 @@
+{
+	"storyName": "chapter 2",
+	"hideFreeplay": false,
+	"weekBackground": "disney",
+	"weekBefore": "tutorial",
+	"freeplayColor": [
+		146,
+		113,
+		253
+	],
+	"startUnlocked": true,
+	"songs": [
+		[
+			"Interference",
+			"experiment",
+			[
+				126,
+				73,
+				0
+			]
+		],
+		[
+			"Labrat",
+			"experiment",
+			[
+				66,
+				73,
+				0
+			]
+		]
+	],
+	"hideStoryMode": false,
+	"weekCharacters": [
+		"experiment",
+		"bf",
+		"gf"
+	],
+	"weekName": "Chapter 2"
+}

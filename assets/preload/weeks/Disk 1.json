@@ -1,0 +1,57 @@
+{
+	"storyName": "chapter 1",
+	"hideFreeplay": false,
+	"weekBackground": "clubhouse",
+	"weekBefore": "tutorial",
+	"freeplayColor": [
+		146,
+		113,
+		253
+	],
+	"startUnlocked": true,
+	"weekCharacters": [
+		"mouse",
+		"bf",
+		"gf"
+	],
+	"songs": [
+		[
+			"Welcome",
+			"mouse",
+			[
+				255,
+				0,
+				0
+			]
+		],
+		[
+			"ClubHouse",
+			"mouse",
+			[
+				215,
+				0,
+				0
+			]
+		],
+		[
+			"Repentance",
+			"mousea",
+			[
+				155,
+				0,
+				0
+			]
+		],
+		[
+			"Dangerous",
+			"mousea",
+			[
+				55,
+				0,
+				0
+			]
+		]
+	],
+	"hideStoryMode": false,
+	"weekName": "Chapter 1"
+}

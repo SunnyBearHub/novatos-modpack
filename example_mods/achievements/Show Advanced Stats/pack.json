@@ -1,0 +1,6 @@
+{
+	"name": "Advanced Stats",
+	"description": "Show the Shits, Bads , Goods and Sicks on a part of the screen",
+	"restart":false,
+	"color": [170, 0, 255]
+}

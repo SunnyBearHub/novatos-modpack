@@ -1,0 +1,175 @@
+{
+	"storyName": "EXTRA",
+	"difficulties": "Expert",
+	"hideFreeplay": false,
+	"weekBackground": "",
+	"freeplayColor": [
+		146,
+		113,
+		253
+	],
+	"weekBefore": "tutorial",
+	"startUnlocked": true,
+	"hideStoryMode": true,
+	"songs": [
+		[
+			"Interference Remake",
+			"experiment",
+			[
+				126,
+				73,
+				0
+			]
+		],
+		[
+			"Misery Remake",
+			"suicide",
+			[
+				40,
+				40,
+				93
+			]
+		],
+		[
+			"Misery Remake V2",
+			"suicide",
+			[
+				40,
+				40,
+				93
+			]
+		],
+		[
+			"Suicide Remake",
+			"suicide3",
+			[
+				0,
+				0,
+				50
+			]
+		],
+		[
+			"Old Welcome",
+			"mouse-old",
+			[
+				1,
+				1,
+				253
+			]
+		],
+		[
+			"Welcome Old Remix",
+			"mouse-old",
+			[
+				1,
+				133,
+				253
+			]
+		],
+		[
+			"MouseCore",
+			"trio",
+			[
+				126,
+				100,
+				1
+			]
+		],
+		[
+			"Scrap",
+			"fnati",
+			[
+				106,
+				53,
+				53
+			]
+		],
+		[
+			"The End",
+			"costume",
+			[
+				26,
+				40,
+				33
+			]
+		],
+		[
+			"Old Crisis",
+			"mouse-old",
+			[
+				46,
+				53,
+				193
+			]
+		],
+		[
+			"The Old",
+			"mouse-old",
+			[
+				6,
+				13,
+				253
+			]
+		],
+		[
+			"Blinded By Sin",
+			"oldsuicide3",
+			[
+				135,
+				135,
+				135
+			]
+		],
+		[
+			"Dangerous 2",
+			"mousetest",
+			[
+				6,
+				0,
+				13
+			]
+		],
+		[
+			"Crisis Leak",
+			"mousea",
+			[
+				6,
+				13,
+				213
+			]
+		],
+		[
+			"Crisis",
+			"mousea",
+			[
+				6,
+				0,
+				213
+			]
+		],
+		[
+			"Pain And Suffering",
+			"mouse-old",
+			[
+				46,
+				0,
+				253
+			]
+		],
+		[
+			"Error",
+			"mau",
+			[
+				0,
+				113,
+				253
+			]
+		]
+	],
+	"weekCharacters": [
+		"",
+		"bf",
+		""
+	],
+	"weekName": "Extras"
+}

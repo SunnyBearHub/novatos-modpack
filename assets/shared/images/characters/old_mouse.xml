@@ -1,0 +1,19 @@
+<?xml version='1.0' encoding='utf-8'?>
+<TextureAtlas imagePath="MouseOld.png"><SubTexture name="MouseOld Down0000" x="0" y="0" width="486" height="400" frameX="0" frameY="0" frameWidth="486" frameHeight="400" />
+<SubTexture name="MouseOld Down0001" x="486" y="0" width="486" height="400" frameX="0" frameY="0" frameWidth="486" frameHeight="400" />
+<SubTexture name="MouseOld Down0002" x="972" y="0" width="486" height="400" frameX="0" frameY="0" frameWidth="486" frameHeight="400" />
+<SubTexture name="MouseOld Idle0000" x="1458" y="0" width="448" height="669" frameX="0" frameY="0" frameWidth="448" frameHeight="669" />
+<SubTexture name="MouseOld Idle0001" x="0" y="669" width="448" height="669" frameX="0" frameY="0" frameWidth="448" frameHeight="669" />
+<SubTexture name="MouseOld Idle0002" x="448" y="669" width="448" height="669" frameX="0" frameY="0" frameWidth="448" frameHeight="669" />
+<SubTexture name="MouseOld Idle0003" x="896" y="669" width="448" height="669" frameX="0" frameY="0" frameWidth="448" frameHeight="669" />
+<SubTexture name="MouseOld Idle0004" x="1344" y="669" width="448" height="669" frameX="0" frameY="0" frameWidth="448" frameHeight="669" />
+<SubTexture name="MouseOld Left0000" x="0" y="1338" width="575" height="652" frameX="0" frameY="0" frameWidth="575" frameHeight="652" />
+<SubTexture name="MouseOld Left0001" x="575" y="1338" width="575" height="652" frameX="0" frameY="0" frameWidth="575" frameHeight="652" />
+<SubTexture name="MouseOld Left0002" x="1150" y="1338" width="575" height="652" frameX="0" frameY="0" frameWidth="575" frameHeight="652" />
+<SubTexture name="MouseOld Right0000" x="1725" y="1338" width="487" height="620" frameX="0" frameY="0" frameWidth="487" frameHeight="620" />
+<SubTexture name="MouseOld Right0001" x="0" y="1990" width="487" height="620" frameX="0" frameY="0" frameWidth="487" frameHeight="620" />
+<SubTexture name="MouseOld Right0002" x="487" y="1990" width="487" height="620" frameX="0" frameY="0" frameWidth="487" frameHeight="620" />
+<SubTexture name="MouseOld Up0000" x="974" y="1990" width="439" height="663" frameX="0" frameY="0" frameWidth="439" frameHeight="663" />
+<SubTexture name="MouseOld Up0001" x="1413" y="1990" width="439" height="663" frameX="0" frameY="0" frameWidth="439" frameHeight="663" />
+<SubTexture name="MouseOld Up0002" x="0" y="2653" width="439" height="663" frameX="0" frameY="0" frameWidth="439" frameHeight="663" />
+</TextureAtlas>
