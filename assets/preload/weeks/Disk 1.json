@@ -1,5 +1,6 @@
 {
 	"storyName": "chapter 1",
+	"difficulties": "Expert",
 	"hideFreeplay": false,
 	"weekBackground": "clubhouse",
 	"weekBefore": "tutorial",

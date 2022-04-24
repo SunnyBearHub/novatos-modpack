@@ -1,0 +1,6 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TextureAtlas imagePath="AngelBump.png">
+	<SubTexture name="Angel Title Bump0000" x="4" y="4" width="385" height="582" pivotX="22" pivotY="0"/>
+	<SubTexture name="Angel Title Bump0001" x="4" y="4" width="385" height="582" pivotX="22" pivotY="0"/>
+	<SubTexture name="Angel Title Bump0003" x="4" y="4" width="385" height="582" pivotX="22" pivotY="0"/>
+</TextureAtlas>

@@ -12,6 +12,7 @@ import flixel.math.FlxMath;
 import flixel.text.FlxText;
 import flixel.util.FlxColor;
 import flixel.tweens.FlxTween;
+import flixel.tweens.FlxEase;
 #if MODS_ALLOWED
 import sys.FileSystem;
 import sys.io.File;
@@ -32,6 +33,9 @@ class CreditsState extends MusicBeatState
 	var descText:FlxText;
 	var intendedColor:Int;
 	var colorTween:FlxTween;
+	var descBox:AttachedSprite;
+
+	var offsetThing:Float = -75;
 
 	override function create()
 	{
@@ -40,10 +44,9 @@ class CreditsState extends MusicBeatState
 		DiscordClient.changePresence("In the Menus", null);
 		#end
 
+		persistentUpdate = true;
 		bg = new FlxSprite().loadGraphic(Paths.image('menuDesat'));
 		add(bg);
-
-		bg.scale.x = bg.scale.y = scaleRatio;
 		bg.screenCenter();
 		
 		grpOptions = new FlxTypedGroup<Alphabet>();
@@ -96,7 +99,7 @@ class CreditsState extends MusicBeatState
 			['El Edd',		'angel',		'Ideas',						'',	'FFD800'],
 			[''],
 			['Other Credits'],
-			['Walten Animaciones',		'angel',		'Vs Mouse Old\nSprites',						'',	'FFD800'],
+			['Walten Animaciones',		'angel',		'Special Thanks',						'',	'FFD800'],
 			['DukoJuko',			'ayop',		'Suicide Remaster\nIcons',					'https://gamejolt.com/@Glitch_99',		'FFD800'],
 			['RoadR',			'ayop',		'Misery Remake V2 Chart',					'https://youtube.com/channel/UCu7B3-LepePfl_gIeV4soEQ',		'FFD800'],
 			[''],
@@ -159,11 +162,20 @@ class CreditsState extends MusicBeatState
 				if(curSelected == -1) curSelected = i;
 			}
 		}
+		
+		descBox = new AttachedSprite();
+		descBox.makeGraphic(1, 1, FlxColor.BLACK);
+		descBox.xAdd = -10;
+		descBox.yAdd = -10;
+		descBox.alphaMult = 0.6;
+		descBox.alpha = 0.6;
+		add(descBox);
 
-		descText = new FlxText(50, 600, 1180, "", 32);
-		descText.setFormat(Paths.font("vcr.ttf"), 32, FlxColor.WHITE, CENTER, FlxTextBorderStyle.OUTLINE, FlxColor.BLACK);
+		descText = new FlxText(50, FlxG.height + offsetThing - 25, 1180, "", 32);
+		descText.setFormat(Paths.font("vcr.ttf"), 32, FlxColor.WHITE, CENTER/*, FlxTextBorderStyle.OUTLINE, FlxColor.BLACK*/);
 		descText.scrollFactor.set();
-		descText.borderSize = 2.4;
+		//descText.borderSize = 2.4;
+		descBox.sprTracker = descText;
 		add(descText);
 
 		bg.color = getCurrentBGColor();
@@ -172,6 +184,8 @@ class CreditsState extends MusicBeatState
 		super.create();
 	}
 
+	var quitting:Bool = false;
+	var holdTime:Float = 0;
 	override function update(elapsed:Float)
 	{
 		if (FlxG.sound.music.volume < 0.7)
@@ -179,55 +193,100 @@ class CreditsState extends MusicBeatState
 			FlxG.sound.music.volume += 0.5 * FlxG.elapsed;
 		}
 
-		var upP = controls.UI_UP_P;
-		var downP = controls.UI_DOWN_P;
-
-		if (upP)
-		{
-			changeSelection(-1);
-		}
-		if (downP)
-		{
-			changeSelection(1);
-		}
-
-		if (controls.BACK)
-		{
-			if(colorTween != null) {
-				colorTween.cancel();
-			}
-			FlxG.sound.play(Paths.sound('cancelMenu'));
-			MusicBeatState.switchState(new MainMenuState());
-		}
-		if(controls.ACCEPT) {
-			CoolUtil.browserLoad(creditsStuff[curSelected][3]);
-		}
-		super.update(elapsed);
-	}
-
-	function changeSelection(change:Int = 0)
-	{
-		FlxG.sound.play(Paths.sound('scrollMenu'), 0.4);
-		do {
-			curSelected += change;
-			if (curSelected < 0)
-				curSelected = creditsStuff.length - 1;
-			if (curSelected >= creditsStuff.length)
-				curSelected = 0;
-		} while(unselectableCheck(curSelected));
-
-		var newColor:Int =  getCurrentBGColor();
-		if(newColor != intendedColor) {
-			if(colorTween != null) {
-				colorTween.cancel();
-			}
-			intendedColor = newColor;
-			colorTween = FlxTween.color(bg, 1, bg.color, intendedColor, {
-				onComplete: function(twn:FlxTween) {
-					colorTween = null;
+		if(!quitting)
+			{
+				if(creditsStuff.length > 1)
+				{
+					var shiftMult:Int = 1;
+					if(FlxG.keys.pressed.SHIFT) shiftMult = 3;
+	
+					var upP = controls.UI_UP_P;
+					var downP = controls.UI_DOWN_P;
+	
+					if (upP)
+					{
+						changeSelection(-1 * shiftMult);
+						holdTime = 0;
+					}
+					if (downP)
+					{
+						changeSelection(1 * shiftMult);
+						holdTime = 0;
+					}
+	
+					if(controls.UI_DOWN || controls.UI_UP)
+					{
+						var checkLastHold:Int = Math.floor((holdTime - 0.5) * 10);
+						holdTime += elapsed;
+						var checkNewHold:Int = Math.floor((holdTime - 0.5) * 10);
+	
+						if(holdTime > 0.5 && checkNewHold - checkLastHold > 0)
+						{
+							changeSelection((checkNewHold - checkLastHold) * (controls.UI_UP ? -shiftMult : shiftMult));
+						}
+					}
 				}
-			});
+	
+				if(controls.ACCEPT) {
+					CoolUtil.browserLoad(creditsStuff[curSelected][3]);
+				}
+				if (controls.BACK)
+				{
+					if(colorTween != null) {
+						colorTween.cancel();
+					}
+					FlxG.sound.play(Paths.sound('cancelMenu'));
+					MusicBeatState.switchState(new MainMenuState());
+					quitting = true;
+				}
+			}
+			
+			for (item in grpOptions.members)
+			{
+				if(!item.isBold)
+				{
+					var lerpVal:Float = CoolUtil.boundTo(elapsed * 12, 0, 1);
+					if(item.targetY == 0)
+					{
+						var lastX:Float = item.x;
+						item.screenCenter(X);
+						item.x = FlxMath.lerp(lastX, item.x - 10, lerpVal);
+						item.forceX = item.x;
+					}
+					else
+					{
+						item.x = FlxMath.lerp(item.x, 200 + -0 * Math.abs(item.targetY), lerpVal);
+						item.forceX = item.x;
+					}
+				}
+			}
+			super.update(elapsed);
 		}
+	
+		var moveTween:FlxTween = null;
+		function changeSelection(change:Int = 0)
+		{
+			FlxG.sound.play(Paths.sound('scrollMenu'), 0.4);
+			do {
+				curSelected += change;
+				if (curSelected < 0)
+					curSelected = creditsStuff.length - 1;
+				if (curSelected >= creditsStuff.length)
+					curSelected = 0;
+			} while(unselectableCheck(curSelected));
+	
+			var newColor:Int =  getCurrentBGColor();
+			if(newColor != intendedColor) {
+				if(colorTween != null) {
+					colorTween.cancel();
+				}
+				intendedColor = newColor;
+				colorTween = FlxTween.color(bg, 1, bg.color, intendedColor, {
+					onComplete: function(twn:FlxTween) {
+						colorTween = null;
+					}
+				});
+			}
 
 		var bullShit:Int = 0;
 
@@ -236,6 +295,7 @@ class CreditsState extends MusicBeatState
 			item.targetY = bullShit - curSelected;
 			bullShit++;
 
+
 			if(!unselectableCheck(bullShit-1)) {
 				item.alpha = 0.6;
 				if (item.targetY == 0) {
@@ -243,9 +303,17 @@ class CreditsState extends MusicBeatState
 				}
 			}
 		}
-		descText.text = creditsStuff[curSelected][2];
-	}
 
+		descText.text = creditsStuff[curSelected][2];
+		descText.y = FlxG.height - descText.height + offsetThing - 60;
+
+		if(moveTween != null) moveTween.cancel();
+		moveTween = FlxTween.tween(descText, {y : descText.y + 75}, 0.25, {ease: FlxEase.sineOut});
+
+		descBox.setGraphicSize(Std.int(descText.width + 20), Std.int(descText.height + 25));
+		descBox.updateHitbox();
+	}
+	
 	function getCurrentBGColor() {
 		var bgColor:String = creditsStuff[curSelected][4];
 		if(!bgColor.startsWith('0x')) {

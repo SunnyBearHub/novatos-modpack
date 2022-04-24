@@ -66,8 +66,8 @@ class FunkinLua {
 		var result:Dynamic = LuaL.dofile(lua, script);
 		var resultStr:String = Lua.tostring(lua, result);
 		if(resultStr != null && result != 0) {
-			lime.app.Application.current.window.alert(resultStr, 'Error on .LUA script!');
-			trace('Error on .LUA script! ' + resultStr);
+			lime.app.Application.current.window.alert(resultStr, 'Error on lua script!');
+			trace('Error on lua script! ' + resultStr);
 			lua = null;
 			return;
 		}
@@ -734,6 +734,9 @@ class FunkinLua {
 		});
 		Lua_helper.add_callback(lua, "precacheSound", function(name:String) {
 			CoolUtil.precacheSound(name);
+		});
+		Lua_helper.add_callback(lua, "precacheMusic", function(name:String) {
+			CoolUtil.precacheMusic(name);
 		});
 		Lua_helper.add_callback(lua, "triggerEvent", function(name:String, arg1:Dynamic, arg2:Dynamic) {
 			var value1:String = arg1;
