@@ -16,7 +16,7 @@ class DiscordClient
 	{
 		trace("Discord Client cargando PAPU...");
 		DiscordRpc.start({
-			clientID: "863222024192262205",
+			clientID: "1035660981554135111",
 			onReady: onReady,
 			onError: onError,
 			onDisconnected: onDisconnected
@@ -44,7 +44,7 @@ class DiscordClient
 			details: "In the Menus",
 			state: null,
 			largeImageKey: 'icon',
-			largeImageText: "Vs Mouse Dev Version"
+			largeImageText: "Novatos Modpack"
 		});
 	}
 
